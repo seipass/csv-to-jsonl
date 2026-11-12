@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-to-jsonl"
+version = "1.0.0"
+description = "Convert CSV dictionaries into newline-delimited JSON text."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+csv-to-jsonl = "csv_to_jsonl:main"
+
+[tool.setuptools]
+py-modules = ["csv_to_jsonl"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
